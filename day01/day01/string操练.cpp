@@ -1,5 +1,6 @@
 #include<iostream>
 #include"string"
+#include"algorithm"
 using namespace std;
 void main21()
 {
@@ -105,13 +106,37 @@ void main25()
 	}
 	cout << "s:" << s << endl;
 }
-int main()
+
+void main26()
+{
+	string s1 = "hello1 hello2 hello3";
+	string::iterator it = find(s1.begin(), s1.end(), 'l');
+	if (it != s1.end())
+	{
+		s1.erase(it);
+	}
+	cout <<"s1:" <<s1<< endl;
+}
+
+void main27()
+{
+	string s1 = "aaaBBB";
+	transform(s1.begin(), s1.end(), s1.begin(), toupper);
+	cout << "s1:" << s1 << endl;
+	string s2 = "AAACCC";
+	transform(s2.begin(),s2.end(),s2.begin(),tolower);
+	cout << "s2:" << s2 << endl;
+}
+
+int mainString()
 {
 	//main21();
 	//main22();
 	//main23();
 	//main24();
-	main25();
+	//main25();
+	//main26();
+	main27();
 	cout << "helloworld" << endl;
 	system("pause");
 	return 0;
