@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int main()
+int main01()
 {
 	cout << "helloword" << endl;
 	system("pause");
