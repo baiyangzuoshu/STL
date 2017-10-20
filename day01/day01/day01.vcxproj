@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="deque.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="stack操练.cpp" />
     <ClCompile Include="string操练.cpp" />
     <ClCompile Include="vector操练.cpp" />
   </ItemGroup>
