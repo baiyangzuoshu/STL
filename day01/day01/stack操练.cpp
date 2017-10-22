@@ -52,7 +52,7 @@ void main52()
 	}
 
 }
-int main()
+int mainStack()
 {
 	//main51();
 	main52();
