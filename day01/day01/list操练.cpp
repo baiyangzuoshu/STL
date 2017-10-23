@@ -52,7 +52,7 @@ void main72()
 	cout << "size:" << l.size() << endl;
 }
 
-int main()
+int mainlist()
 {
 	main72();
 	cout << "helloword" << endl;
