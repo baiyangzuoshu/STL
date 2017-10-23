@@ -39,5 +39,8 @@
     <ClCompile Include="priority_queue优先级队列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="set操练.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

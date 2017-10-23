@@ -37,7 +37,7 @@ void main81()
 		p3.pop();
 	}
 }
-int main()
+int mainpriority_queue()
 {
 	main81();
 	cout << "helloword" << endl;
