@@ -2,6 +2,8 @@
 using namespace std;
 #include"set"
 #include"functional"
+#pragma warning(disable:4996)
+
 //集合，元素唯一，自动排序（默认是从小到大），不能按照[]取值
 //红黑树
 void main91()
@@ -46,10 +48,97 @@ void main92()
 		cout << *it << endl;
 	}
 }
+
+class Student
+{
+public:
+	Student(int age, char* name)
+	{
+		this->age = age;
+		strcpy(this->name, name);
+	}
+	void printStudent()
+	{
+		cout << "age:" << age << ",name:" << name;
+	}
+	int getAge()
+	{
+		return age;
+	}
+public:
+	int		age;
+	char	name[32];
+};
+
+struct Functionor
+{
+	bool operator()(const Student& left, const Student& right)
+	{
+		if (left.age > right.age)//大到小排序
+			return true;
+		return false;
+	}
+};
+
+void main93()
+{
+	Student s1(1, "s1");
+	Student s2(10, "s2");
+	Student s3(8, "s3");
+	Student s4(16,"s4");
+
+	set<Student, Functionor> s;
+	s.insert(s1);
+	s.insert(s2);
+	s.insert(s3);
+	s.insert(s4);
+
+	for (set<Student, Functionor>::iterator it = s.begin(); it != s.end(); it++)
+	{
+		cout << "age:" << (*it).age << ",name:" << (*it).name << endl;
+	}
+}
+
+void main94()
+{
+	Student s1(1, "s1");
+	Student s2(10, "s2");
+	Student s3(8, "s3");
+	Student s4(16, "s4");
+	Student s5(10, "s5");
+
+	set<Student, Functionor> s;
+	auto it=s.insert(s2);
+	if (true == it.second)
+	{
+		cout << "success";
+	}
+	else
+	{
+		cout << "faile";
+	}
+	s.insert(s4);
+	auto it2=s.insert(s5);
+	if (true == it2.second)
+	{
+		cout << "success";
+	}
+	else
+	{
+		cout << "faile";
+	}
+	for (set<Student, Functionor>::iterator it = s.begin(); it != s.end(); it++)
+	{
+		cout << "age:" << (*it).age << ",name:" << (*it).name << endl;
+	}
+}
+
 int main()
 {
 	//main91();
-	main92();
+	//main92();
+	//main93();
+	main94();
 	cout << "helloword" << endl;
 	system("pause");
 	return 0;
