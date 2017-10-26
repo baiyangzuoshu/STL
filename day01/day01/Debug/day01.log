@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/10/25 星期三 21:49:37。
+﻿生成启动时间为 2017/10/26 星期四 8:27:38。
      1>项目“D:\CODE\STL\day01\day01\day01.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "set操练.cpp"
@@ -18,4 +18,4 @@
 
 已成功生成。
 
-已用时间 00:00:01.91
+已用时间 00:00:03.45

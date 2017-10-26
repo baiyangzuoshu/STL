@@ -133,12 +133,38 @@ void main94()
 	}
 }
 
+void main95()
+{
+	set<int> s;
+	for (int i = 0; i < 10; i++)
+	{
+		s.insert(i);
+	}
+	for (set<int>::iterator it = s.begin(); it != s.end(); it++)
+	{
+		cout << *it << " ";
+	}
+	cout << "size" << s.size() << endl;
+	set<int>::iterator it0 = s.find(5);
+	cout << "it0:" << *it0 << endl;
+	set<int>::iterator it1 = s.lower_bound(5);
+	cout << "it1:" << *it1 << endl;
+	set<int>::iterator it2 = s.upper_bound(5);
+	cout << "it2:" << *it2 << endl;
+
+	pair<set<int>::iterator, set<int>::iterator> it3 = s.equal_range(5);
+	set<int>::iterator it4 = it3.first;
+	set<int>::iterator it5 = it3.second;
+	cout << "it4:" << *it4 << endl;
+	cout << "it5:" << *it5 << endl;
+}
 int main()
 {
 	//main91();
 	//main92();
 	//main93();
-	main94();
+	//main94();
+	main95();
 	cout << "helloword" << endl;
 	system("pause");
 	return 0;
