@@ -72,10 +72,61 @@ void main02()
 		cout << it->first << "\t" << it->second << endl;
 	}
 }
+
+void main03()
+{
+	map<int, string> map1;
+	map1.insert(pair<int, string>(1, "maomao1"));
+	map1.insert(pair<int, string>(2, "maomao2"));
+
+	map1.insert(make_pair<int, string>(4, "maomao4"));
+	map1.insert(make_pair<int, string>(5, "maomao5"));
+
+	map1.insert(map<int, string>::value_type(7, "maomao7"));
+	map1.insert(map<int, string>::value_type(8, "maomao8"));
+
+	map1[10] = "maomao10";
+	map1[11] = "maomao11";
+
+	for (map<int, string>::iterator it = map1.begin(); it != map1.end(); it++)
+	{
+		cout << it->first << "\t" << it->second << endl;
+	}
+
+	map<int,string>::iterator myFind = map1.find(100);
+	if (myFind == map1.end())
+	{
+		cout << "没有找到100" << endl;
+	}
+	else
+	{
+		cout <<myFind->first<<"\t"<<myFind->second << endl;
+	}
+	//typedef pair<iterator, iterator> _Pairii;
+	pair<map<int,string>::iterator,map<int,string>::iterator>  it =map1.equal_range(8);
+	if (it.first == map1.end())
+	{
+		cout << "没有找到大于等于8的" << endl;
+	}
+	else
+	{
+		cout << it.first->first << "\t" << it.first->second << endl;
+	}
+
+	if (it.second == map1.end())
+	{
+		cout << "没有找到大于8的" << endl;
+	}
+	else
+	{
+		cout << it.second->first << "\t" << it.second->second << endl;
+	}
+}
 int main()
 {
 	//main01();
-	main02();
+	//main02();
+	main03();
 	cout << "hellowrold" << endl;
 	system("pause");
 	return 0;
