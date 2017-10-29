@@ -122,7 +122,7 @@ void main03()
 		cout << it.second->first << "\t" << it.second->second << endl;
 	}
 }
-int main()
+int mainMap()
 {
 	//main01();
 	//main02();

@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
-
+#define MAOLOG cout<<"["<<__FILE__<<":"<<__LINE__<<"]"
 int main01()
 {
-	cout << "hellowrold" << endl;
+	MAOLOG << "hellowrold" << endl;
 	system("pause");
 	return 0;
 }

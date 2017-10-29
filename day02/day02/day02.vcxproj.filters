@@ -21,5 +21,11 @@
     <ClCompile Include="map基本操作.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="multimap操练.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="容器值语意.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

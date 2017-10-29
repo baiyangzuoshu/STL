@@ -148,6 +148,8 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="map基本操作.cpp" />
+    <ClCompile Include="multimap操练.cpp" />
+    <ClCompile Include="容器值语意.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
