@@ -193,13 +193,64 @@ void main05()
 	for_each(v1.begin(), v1.end(), ShowFunction2);
 }
 
+struct CompareNoCare
+{
+	bool operator()(const string& str1, const string& str2)
+	{
+		string str1_;
+		str1_.resize(str1.size());
+		transform(str1.begin(), str1.end(), str1_.begin(), toupper);
+
+		string str2_;
+		str2_.resize(str2.size());
+		transform(str2.begin(), str2.end(), str2_.begin(), toupper);
+
+		return str1_ < str2_;
+	}
+};
+
+void main06()
+{
+	set<string> s1;
+	s1.insert("dfsd");
+	s1.insert("dffff");
+	s1.insert("dllll");
+	s1.insert("dPoP");
+
+	set<string>::iterator it = s1.find("dpop");//默认不区分大小写
+	if (it == s1.end())
+	{
+		cout << "no found dpop" << endl;
+	}
+	else
+	{
+		cout << "found dpop" << endl;
+	}
+	//二元谓词
+	set<string, CompareNoCare> s2;
+	s2.insert("dfsd");
+	s2.insert("dffff");
+	s2.insert("dllll");
+	s2.insert("dPoP");
+
+	set<string, CompareNoCare>::iterator it2 = s2.find("dpop");//默认不区分大小写
+	if (it2 == s2.end())
+	{
+		cout << "no found dpop" << endl;
+	}
+	else
+	{
+		cout << "found dpop" << endl;
+	}
+}
 int main()
 {
 	//main01();
 	//main02();
 	//main03();
 	//main04();
-	main05();
+	//main05();
+	main06();
 	cout << "hellowrold" << endl;
 	system("pause");
 	return 0;
