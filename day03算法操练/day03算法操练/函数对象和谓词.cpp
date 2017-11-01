@@ -40,7 +40,7 @@ void ShowFunction1(T& t)
 
 void ShowFunction2(int t)
 {
-	cout << t << endl;
+	cout << t << " ";
 }
 //普通函数和函数对象的异同
 void main01()
@@ -117,11 +117,89 @@ void main03()
 		cout << "it:" << *it << endl;
 	}
 }
+
+template<typename T>
+class SumAdd
+{
+public:
+	T operator()(T& t1, T& t2)
+	{
+		return t1 + t2;
+	}
+};
+
+//二元函数对象和二元谓词
+void main04()
+{
+	vector<int> v1, v2,v3;
+	v1.push_back(1);
+	v1.push_back(3);
+	v1.push_back(4);
+
+
+	v2.push_back(5);
+	v2.push_back(53);
+	v2.push_back(54);
+	//v2.push_back(58);思考，这样可以吗？v1.push_back(58);可以吗？
+
+	v3.resize(10);
+	
+	/*
+	template<class _InIt1,
+	class _InIt2,
+	class _OutIt,
+	class _Fn2> inline
+	_OutIt transform(_InIt1 _First1, _InIt1 _Last1,
+	_InIt2 _First2, _OutIt _Dest, _Fn2 _Func)
+	{	// transform [_First1, _Last1) and [_First2, ...) with _Func
+	_DEBUG_RANGE_PTR(_First1, _Last1, _First2);
+	_DEBUG_POINTER_IF(_First1 != _Last1, _Dest);
+	_DEBUG_POINTER_IF(_First1 != _Last1, _Func);
+	return (_Transform2(_Unchecked(_First1), _Unchecked(_Last1),
+	_First2, _Dest, _Func,
+	_Is_checked(_Dest)));
+	}
+	*/
+	transform(v1.begin(),v1.end(),v2.begin(),v3.begin(),SumAdd<int>());
+
+	for (vector<int>::iterator it = v3.begin(); it != v3.end(); it++)
+	{
+		cout << *it << " ";
+	}
+}
+
+bool myCompare(const int& value1, const int& value2)
+{
+	return value1 < value2;
+}
+
+//二元谓词
+void main05()
+{
+	vector<int> v1(10);
+	for (int i = 0; i < 10; i++)
+	{
+		int _value = rand() % 100;
+		v1[i] = _value;
+	}
+	for (vector<int>::iterator it = v1.begin(); it != v1.end();it++)
+	{
+		cout << *it << " ";
+	}
+	cout << endl;
+
+	sort(v1.begin(),v1.end(),myCompare);
+
+	for_each(v1.begin(), v1.end(), ShowFunction2);
+}
+
 int main()
 {
 	//main01();
 	//main02();
-	main03();
+	//main03();
+	//main04();
+	main05();
 	cout << "hellowrold" << endl;
 	system("pause");
 	return 0;
