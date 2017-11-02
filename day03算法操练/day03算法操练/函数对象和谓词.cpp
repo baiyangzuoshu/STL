@@ -243,14 +243,14 @@ void main06()
 		cout << "found dpop" << endl;
 	}
 }
-int main()
+int mainFunction()
 {
 	//main01();
 	//main02();
 	//main03();
 	//main04();
 	//main05();
-	main06();
+	//main06();
 	cout << "hellowrold" << endl;
 	system("pause");
 	return 0;
