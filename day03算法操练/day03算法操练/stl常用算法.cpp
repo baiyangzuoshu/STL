@@ -277,6 +277,49 @@ void sortMain()
 		it->printInfo();
 	}
 }
+
+void copyMain()
+{
+	vector<int> v1;
+	v1.push_back(1);
+	v1.push_back(3);
+	v1.push_back(5);
+
+	vector<int> v2;
+	v2.resize(v1.size());
+
+	copy(v1.begin(), v1.end(), v2.begin());
+	printT(v2);
+}
+void replaceMain()
+{
+	vector<int> v1;
+	v1.push_back(1);
+	v1.push_back(3);
+	v1.push_back(5);
+	v1.push_back(7);
+	printT(v1);
+	replace(v1.begin(), v1.end(), 3,9);
+	printT(v1);
+}
+
+bool  Greate_5(const int& n)
+{
+	if (n > 5)
+		return true;
+	return false;
+}
+void replaceIfMain()
+{
+	vector<int> v1;
+	v1.push_back(1);
+	v1.push_back(3);
+	v1.push_back(5);
+	v1.push_back(7);
+	printT(v1);
+	replace_if(v1.begin(), v1.end(), Greate_5, 9);
+	printT(v1);
+}
 int main()
 {
 	//foreachMain();
@@ -287,7 +330,10 @@ int main()
 	//countMain();
 	//countIfMain();
 	//mergeMain();
-	sortMain();
+	//sortMain();
+	//copyMain();
+	//replaceMain();
+	replaceIfMain();
 	cout << "hellowrold" << endl;
 	system("pause");
 	return 0;
