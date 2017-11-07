@@ -147,6 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="02预定义函数对象和函数适配器.cpp" />
+    <ClCompile Include="foreach和transfrom.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="函数对象和谓词.cpp" />
   </ItemGroup>

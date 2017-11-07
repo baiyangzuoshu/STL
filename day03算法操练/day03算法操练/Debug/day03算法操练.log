@@ -1,10 +1,11 @@
-﻿生成启动时间为 2017/11/2 星期四 21:56:19。
+﻿生成启动时间为 2017/11/7 星期二 7:58:56。
      1>项目“D:\CODE\STL\day03算法操练\day03算法操练\day03算法操练.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "02预定义函数对象和函数适配器.cpp"
-         02预定义函数对象和函数适配器.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt "foreach和transfrom.cpp"
+         foreach和transfrom.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CODE\STL\day03算法操练\Debug\day03算法操练.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CODE\STL\day03算法操练\Debug\day03算法操练.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CODE\STL\day03算法操练\Debug\day03算法操练.lib" /MACHINE:X86 "Debug\02预定义函数对象和函数适配器.obj"
+         "Debug\foreach和transfrom.obj"
          Debug\main.obj
          "Debug\函数对象和谓词.obj"
          day03算法操练.vcxproj -> D:\CODE\STL\day03算法操练\Debug\day03算法操练.exe
@@ -12,4 +13,4 @@
 
 已成功生成。
 
-已用时间 00:00:01.71
+已用时间 00:00:01.60

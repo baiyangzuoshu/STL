@@ -97,7 +97,7 @@ void main22()
 	int num5 = count_if(v1.begin(), v1.end(), not1(bind2nd(modulus<int>(), 2)));
 	cout << "求偶数的个数：:" << num5 << endl;
 }
-int main()
+int main03()
 {
 	//main21();
 	main22();
