@@ -24,5 +24,11 @@
     <ClCompile Include="02函数指针做函数参数的剖析.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="03再谈多级指针.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

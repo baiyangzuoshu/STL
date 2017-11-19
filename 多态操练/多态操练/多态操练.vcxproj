@@ -147,7 +147,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="02函数指针做函数参数的剖析.c" />
+    <ClCompile Include="03再谈多级指针.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="函数指针基本语法.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

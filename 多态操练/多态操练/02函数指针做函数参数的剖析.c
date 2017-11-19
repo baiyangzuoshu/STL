@@ -37,7 +37,7 @@ int MainOp2(int(*myPointer2)(int a, int b))
 	int c = myPointer2(99, 100);
 	return c;
 }
-int main()
+int main022()
 {
 	MainOp(myAdd);
 	MainOp2(myAdd2);
