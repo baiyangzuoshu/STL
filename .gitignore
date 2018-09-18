@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+/stl_config_test/*.db
+/stl_config_test/Debug
