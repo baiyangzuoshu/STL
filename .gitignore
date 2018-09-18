@@ -32,3 +32,5 @@
 *.app
 /stl_config_test/*.db
 /stl_config_test/Debug
+/stl_config_test/stl_config_test/Debug
+/stl_config_test/.vs/stl_config_test/v14/*.suo
